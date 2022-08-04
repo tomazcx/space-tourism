@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Home = () => {
     return (
-        <main className="bg-no-repeat w-screen bg-fixed  pb-24">
+        <main className="w-screen  pb-24">
             <section className="grid grid-cols-1 mx-auto desktop:grid-cols-2 w-11/12">
                 <div className="flex flex-col text-center desktop:text-left gap-4 items text-white mx-auto">
                     <span className="title-page text-lg">so, you want to travel to</span>

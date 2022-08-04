@@ -12,7 +12,7 @@ import classNames from 'classnames'
 
 export const Crew = () => {
 
-    const [displayCrew, setCrew] = useState(0)
+    const [crewId, setId] = useState(0)
     const images = [douglas, mark, victor, anousheh]
 
     return (
@@ -22,24 +22,24 @@ export const Crew = () => {
                 <div className='flex flex-col h-full gap-16'>
                     <h1 className="text-center medium:text-left medium:flex medium medium:justify-start medium:gap-6"><span className="text-gray-500 font-bold text-lg mr-8 medium:mr-0">02</span> <span className="title-page text-sm medium:text-lg">meet your crew</span></h1>
                     <div className='xl:h-[500px] border-b border-gray-500 xl:w-full flex sm:hidden flex-col justify-end items-center xl:items-start'>
-                        <img src={images[displayCrew]} alt="Crew image" className={displayCrew === 1 ? 'w-2/5 xl:w-7/12' : 'w-2/4 xl:w-9/12'} />
+                        <img src={images[crewId]} alt="Crew image" className={crewId === 1 ? 'w-2/5 xl:w-7/12' : 'w-2/4 xl:w-9/12'} />
                     </div>
                     <div className='flex sm:hidden gap-4 justify-center xl:justify-start'>
-                        <DotSlide key={'00'} selected={displayCrew} funSelect={setCrew} value={0} />
-                        <DotSlide key={'01'} selected={displayCrew} funSelect={setCrew} value={1} />
-                        <DotSlide key={'02'} selected={displayCrew} funSelect={setCrew} value={2} />
-                        <DotSlide key={'03'} selected={displayCrew} funSelect={setCrew} value={3} />
+                        <DotSlide key={'00'} selected={crewId} funSelect={setId} value={0} />
+                        <DotSlide key={'01'} selected={crewId} funSelect={setId} value={1} />
+                        <DotSlide key={'02'} selected={crewId} funSelect={setId} value={2} />
+                        <DotSlide key={'03'} selected={crewId} funSelect={setId} value={3} />
                     </div>
-                    <CrewInfo info={data.crew[displayCrew]} />
+                    <CrewInfo info={data.crew[crewId]} />
                     <div className='hidden sm:flex gap-4 justify-center xl:justify-start'>
-                        <DotSlide key={'00'} selected={displayCrew} funSelect={setCrew} value={0} />
-                        <DotSlide key={'01'} selected={displayCrew} funSelect={setCrew} value={1} />
-                        <DotSlide key={'02'} selected={displayCrew} funSelect={setCrew} value={2} />
-                        <DotSlide key={'03'} selected={displayCrew} funSelect={setCrew} value={3} />
+                        <DotSlide key={'00'} selected={crewId} funSelect={setId} value={0} />
+                        <DotSlide key={'01'} selected={crewId} funSelect={setId} value={1} />
+                        <DotSlide key={'02'} selected={crewId} funSelect={setId} value={2} />
+                        <DotSlide key={'03'} selected={crewId} funSelect={setId} value={3} />
                     </div>
                 </div>
                 <div className='xl:h-[500px] hidden xl:w-full sm:flex flex-col justify-end items-center xl:items-start'>
-                    <img src={images[displayCrew]} alt="Crew image" className={displayCrew === 1 ? 'w-2/5 xl:w-7/12' : 'w-2/4 xl:w-9/12'} />
+                    <img src={images[crewId]} alt="Crew image" className={crewId === 1 ? 'w-2/5 xl:w-7/12' : 'w-2/4 xl:w-9/12'} />
                 </div>
             </section>
         </main>
